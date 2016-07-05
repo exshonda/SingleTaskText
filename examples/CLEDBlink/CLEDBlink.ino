@@ -9,17 +9,12 @@ void setup() {
 }
 
 void loop() {
-  int i;
-  for(i = 0; i < 25; i++){
-    leds.setColorRGB(0, i*10, 0, 0);
-    delay(10);
-  }
-  for(i = 0; i < 25; i++){
-    leds.setColorRGB(0, 0, i*10, 0);
-    delay(10);
-  }
-  for(i = 0; i < 25; i++){
-    leds.setColorRGB(0, 0, 0, i*10);
-    delay(10);
-  }
+  leds.setColorRGB(0, 250, 0, 0);
+  delay(250);
+
+  leds.setColorRGB(0, 0, 250, 0);
+  delay(250);
+
+  leds.setColorRGB(0, 0, 0, 250);
+  delay(250);
 }
