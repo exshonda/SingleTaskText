@@ -14,11 +14,11 @@ void setup() {
 void loop() {
   int TouchValue = digitalRead(TOUCH_PIN);
 
-  if ((PreTouchValue == 0) && (TouchValue == 1) && (TouchState = 0)) {
+  if ((PreTouchValue == 0) && (TouchValue == 1) && (TouchState == 0)) {
     TouchState = 1;
   }
 
-  if ((PreTouchValue == 1) && (TouchValue == 0) && (TouchState = 1)) {
+  if ((PreTouchValue == 1) && (TouchValue == 0) && (TouchState == 1)) {
     TouchState = 0;
     if (LEDState == 0) {
       LEDState = 1;

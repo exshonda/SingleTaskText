@@ -28,11 +28,11 @@ int OLEDCount = 0;
 void CheckTouch(){
    int TouchValue = digitalRead(TOUCH_PIN);
 
-  if ((PreTouchValue == 0) && (TouchValue == 1) && (TouchState = 0)) {
+  if ((PreTouchValue == 0) && (TouchValue == 1) && (TouchState == 0)) {
     TouchState = 1;
   }
 
-  if ((PreTouchValue == 1) && (TouchValue == 0) && (TouchState = 1)) {
+  if ((PreTouchValue == 1) && (TouchValue == 0) && (TouchState == 1)) {
     TouchState = 0;
     digitalWrite(LED_PIN, HIGH);    
     for(volatile int i = 0; i < 0x400000; i++);
