@@ -74,7 +74,7 @@ void TSL2561_CalculateLux::init()
 signed long TSL2561_CalculateLux::readVisibleLux()
 {
    writeRegister(TSL2561_Address,TSL2561_Control,0x03);  // POWER UP
-   delay(14);
+   delay(15);
    getLux();
 
    writeRegister(TSL2561_Address,TSL2561_Control,0x00);  // POWER Down
